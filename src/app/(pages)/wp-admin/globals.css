@@ -362,7 +362,7 @@ button {
 
 .dashboard {
   position: relative;
-  max-width: 1750px;
+  max-width: 100vw;
   margin: auto;
   height: 100%;
   margin-top: 120px;
@@ -419,6 +419,7 @@ button {
   padding-top: 1rem;
   padding-bottom: 4rem;
   margin-top: 2rem;
+  gap: 8px;
 }
 
 .four_card {
@@ -590,11 +591,14 @@ button {
 .blogscategory {
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 }
 
 .blogscategory table {
   width: 100%;
   color: #000;
+  padding-top: 520px;
+  min-height: 300px;
 }
 
 .blogscategory thead tr {
@@ -602,7 +606,6 @@ button {
   color: #000;
   font-weight: 900;
 }
-
 
 .blogscategory td {
   list-style: auto;
@@ -620,7 +623,7 @@ button {
 
 .blogpage {
   position: relative;
-  max-width: 1750px;
+  max-width: 100vw;
   margin: auto;
   height: 100%;
   margin-top: 120px;
@@ -667,6 +670,19 @@ button {
   color: #1b3155;
   padding: 1rem 10px;
 }
+.blogstable table tbody td:last-child {
+  width: 16%;
+}
+.blogstable table button.edit:hover {
+  background-color: rgb(50, 142, 247);
+  border-color: rgb(50, 142, 247);
+  color: #fff;
+}
+.blogstable table button.delete:hover {
+  background-color: rgb(255, 85, 85);
+  border-color: rgb(255, 85, 85);
+  color: #fff;
+}
 
 .blogstable table tbody {
   border: 1px solid #000;
@@ -685,12 +701,12 @@ button {
   transition: 0.3s ease;
 }
 
-.blogstable table button:hover:nth-child(1) {
+/* .blogstable table button:hover:nth-child(1) {
   background-color: rgb(255, 85, 85);
   border-color: rgb(255, 85, 85);
   color: #fff;
-}
-
+} */
+/* 
 .blogstable table button:hover:nth-child(2) {
   background-color: green;
   border-color: green;
@@ -701,7 +717,7 @@ button {
   background-color: rgb(14, 130, 198);
   border-color: rgb(63, 206, 63);
   color: #fff;
-}
+} */
 
 /* CSS for pagination buttons */
 .blogpagination {
@@ -746,7 +762,7 @@ button {
 
 .addblogspage {
   position: relative;
-  max-width: 1750px;
+  max-width: 100vw;
   margin: auto;
   height: 100%;
   margin-top: 120px;
@@ -833,7 +849,7 @@ button {
 
 .draftblogspage {
   position: relative;
-  max-width: 1750px;
+  max-width: 100vw;
   margin: auto;
   height: 100%;
   margin-top: 120px;
@@ -938,7 +954,7 @@ button {
 
 .settingpage {
   position: relative;
-  max-width: 1750px;
+  max-width: 100vw;
   margin: auto;
   height: 100%;
   margin-top: 120px;
@@ -1273,7 +1289,6 @@ button {
 /*                     Database Loading Components  */
 /* *************************************************** */
 
-
 .loader {
   position: absolute;
   top: 0;
@@ -1351,42 +1366,4 @@ button {
       box-shadow: 0 -8px #076fe5;
       height: 40px;
   }
-}
-
-
-
-/* loadingState  */
-/* HTML: <div class="loadingState"></div> */
-.loadingState {
-  width: 20px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: rgb(78, 78, 203);
-  box-shadow: 0 0 0 0 rgb(78, 78, 203);
-  animation: l2 1.5s infinite linear;
-  position: relative;
-}
-.loadingState:before,
-.loadingState:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 0 0 rgba(86, 86, 221, 0.24);
-  animation: inherit;
-  animation-delay: -0.5s;
-}
-.loadingState:after {
-  animation-delay: -1s;
-}
-@keyframes l2 {
-    100% {box-shadow: 0 0 0 40px #0000}
-}
-
-.loadingBox {
-  display: flex;
-  justify-content: center;
-align-items: center;
-width: 100vw;
-height: 100vh;
 }

@@ -1,0 +1,95 @@
+/* login.module.css */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f4f6; /* Light gray background */
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 32px;
+  width: 400px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db; /* Gray border */
+  border-radius: 4px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Blue shadow */
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b82f6; /* Blue background */
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #9ca3af; /* Gray background when disabled */
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  color: #3b82f6; /* Blue text */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+.container button {
+  padding: 10px 20px;
+  background-color: #7e37d8;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px #333;
+  transition: 0.2s ease-in-out;
+}
+
+.container button:is(:hover, :active) {
+  color: #7e37d8;
+  background-color: #ffffff;
+}
+
+.container button:active {
+  transform: scale(0.9);
+}
